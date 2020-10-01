@@ -1,0 +1,131 @@
+.splash {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 2rem;
+    transition: 1s ease-out;
+}
+
+.splash_svg {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    padding: 2rem;
+}
+
+.splash_svg>svg {
+    width: 100%;
+    height: 100%;
+}
+
+.splash_text {
+    padding: 2rem;
+}
+
+.splash_text>h2 {
+    color: #E81D21;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+/* svg animations */
+
+#grey1 {
+    animation: redchart 2s ease-in infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#grey2 {
+    animation: redchart 1s 1.5s ease-in infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#grey3 {
+    animation: redchart 1s 2s ease-in infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#tick {
+    animation: tick 1s 1s ease-in forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+    opacity: 0;
+}
+
+@keyframes tick {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes redchart {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#whitechart {
+    animation: smallchart 0.5s ease-in;
+    transform-origin: center;
+}
+
+#smallwhitechart {
+    animation: smallchart 0.5s ease-in;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    opacity: 0;
+}
+
+@keyframes smallchart {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* media query */
+
+@media only screen and (max-width: 700px) {
+    .splash {
+        flex-direction: column;
+    }
+    .splash_text>h2 {
+        font-size: 1.5em;
+        font-weight: 800;
+    }
+}

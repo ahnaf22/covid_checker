@@ -1,0 +1,73 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url('../images/coronaBg.png') no-repeat center;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.home_container {
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 1, 1, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_content {
+    color: white;
+    margin-left: -2rem;
+}
+
+.home_content>h1 {
+    font-size: 6em;
+    background: rgb(179, 6, 6);
+    padding-bottom: 20px;
+    box-shadow: 10px 30px 100px 120px rgb(179, 6, 6);
+}
+
+.home_content>h4 {
+    font-size: 2em;
+    font-weight: 100;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+}
+
+.home_content>p {
+    background: white;
+    width: max-content;
+    padding: 1rem;
+    border-radius: 2px;
+    transition: background 0.5s ease, color 0.2s ease;
+}
+
+.home_content>p {
+    color: rgb(179, 6, 6);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.home_content>p:hover {
+    background: rgb(179, 6, 6);
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .home_content>h1 {
+        font-size: 3em;
+        box-shadow: 0px 30px 100px 90px rgb(179, 6, 6);
+    }
+    .home_content>h4 {
+        font-size: 1.2em;
+    }
+    .home_content>p {
+        background: white;
+        padding: .6rem;
+    }
+    .home_content>a {
+        font-weight: 800;
+    }
+}
